@@ -79,18 +79,18 @@ printword:  push    rbp             ; frame
             mov     rdx, rcx        ; arg2
             mov     rcx, wordfmt    ; arg1
             sub     rsp, 32         ; clear room on stack for printed return values
-            call    printf	        ; Call C function
+            call    printf	    ; Call C function
             add     rsp, 32         ; restore stack
             mov     rcx, rdx        ; restore rcx
             mov     rdx, r8         ; restore rdx
-	        mov	    rax, 0	        ; ret 0
+	    mov	    rax, 0	    ; ret 0
             pop     r11             ; restore state
             pop     r9
             pop     r8
             pop     rdx
             pop     rcx
-	        pop	    rbp             ; restore frame
-	        ret
+	    pop	    rbp             ; restore frame
+	    ret
 
 ;prints the number in rcx
 printnum:   push    rbp         ; frame
